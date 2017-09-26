@@ -232,15 +232,11 @@ $(document).ready(function(){
           playerCount++;
           html = '<tr><td><input type="text" placeholder="Player ' + playerCount + '"></td>';
 
-          for(var i = 0; i < 9; i++){
-            html += '<td class="hole' + (i + 1) + '"><div>0</div><i class="fa fa-plus-square"></i>&nbsp;<i class="fa fa-minus-square"></i></td>';
-          }
+          createHolesWithClasses(0, 9);
 
           html += '<td id="player' + playerCount + 'OutScore"></td><td></td>';
 
-          for(var i = 9; i < 18; i++){
-            html += '<td class="hole' + (i + 1) + '"><div>0</div><i class="fa fa-plus-square"></i>&nbsp;<i class="fa fa-minus-square"></i></td>';
-          }
+          createHolesWithClasses(9, 18);
 
           html += '<td id="player' + playerCount + 'InScore"></td><td id="player' + playerCount + 'TotalScore"></td><td></td><td></td>';
 
