@@ -16,8 +16,8 @@ $(document).ready(function(){
       });
     }
 
-    var html;
-    html += '<tr><td><div style="float:left;width:50%;">Tee</div><div style="float:right;text-align: right;width:50%;">Rating/Slope</div></td>';
+    var html = '<tr><td><div style="float:left;width:50%;">Tee</div><div style="float:right;text-align: right;width:50%;">' +
+    'Rating/Slope</div></td>';
 
     createRangeOfCellsWithNumbers(1, 9);
 
@@ -25,8 +25,8 @@ $(document).ready(function(){
 
     createRangeOfCellsWithNumbers(10, 18);
 
-    html += '<td>IN</td><td>TOTAL</td><td>HDCP</td><td>NET</td></tr><tr id="black"><td><div style="float:left;width:50%;">BLACK</div><div style="float:right;text-align: right;width:50%;">' +
-    '76.5/151</div></td>';
+    html += '<td>IN</td><td>TOTAL</td><td>HDCP</td><td>NET</td></tr><tr id="black"><td><div style="float:left;width:50%;">BLACK</div>' +
+    '<div style="float:right;text-align: right;width:50%;">76.5/151</div></td>';
 
     createRangeOfCellsFromArray(0, 9, distances[0]);
 
@@ -34,8 +34,9 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, distances[0]);
 
-    html += '<td>' + sumOfArrayValues(distances[0], 9, 18) + '</td><td>' + sumOfArrayValues(distances[0], 0, 18) + '</td><td></td><td></td></tr><tr id="blue"><td>' +
-    '<div style="float:left;width:50%;">BLUE</div><div style="float:right;text-align: right;width:50%;">74.1/148</div></td>';
+    html += '<td>' + sumOfArrayValues(distances[0], 9, 18) + '</td><td>' + sumOfArrayValues(distances[0], 0, 18) + '</td><td></td>' +
+    '<td></td></tr><tr id="blue"><td><div style="float:left;width:50%;">BLUE</div>' +
+    '<div style="float:right;text-align: right;width:50%;">74.1/148</div></td>';
 
     createRangeOfCellsFromArray(0, 9, distances[1]);
 
@@ -43,8 +44,9 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, distances[1]);
 
-    html += '<td>' + sumOfArrayValues(distances[1], 9, 18) + '</td><td>' + sumOfArrayValues(distances[1], 0, 18) + '</td><td></td><td></td></tr><tr><td><div style="float:left;width:50%;">' +
-    'WHITE</div><div style="float:right;text-align: right;width:50%;">M-72.1/138 <br>L-79.2/153</div></td>';
+    html += '<td>' + sumOfArrayValues(distances[1], 9, 18) + '</td><td>' + sumOfArrayValues(distances[1], 0, 18) + '</td><td></td>' +
+    '<td></td></tr><tr><td><div style="float:left;width:50%;">WHITE</div><div style="float:right;text-align: right;width:50%;">' +
+    'M-72.1/138 <br>L-79.2/153</div></td>';
 
     createRangeOfCellsFromArray(0, 9, distances[2]);
 
@@ -52,8 +54,9 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, distances[2]);
 
-    html += '<td>' + sumOfArrayValues(distances[2], 9, 18) + '</td><td>' + sumOfArrayValues(distances[2], 0, 18) + '</td><td></td><td></td></tr><tr id="green"><td>' +
-    '<div style="float:left;width:50%;">GREEN</div><div style="float:right;text-align: right;width:50%;">M-69.7/131 <br>L-75.4/145</div></td>';
+    html += '<td>' + sumOfArrayValues(distances[2], 9, 18) + '</td><td>' + sumOfArrayValues(distances[2], 0, 18) + '</td><td></td>' +
+    '<td></td></tr><tr id="green"><td><div style="float:left;width:50%;">GREEN</div>' +
+    '<div style="float:right;text-align: right;width:50%;">M-69.7/131 <br>L-75.4/145</div></td>';
 
     createRangeOfCellsFromArray(0, 9, distances[3]);
 
@@ -61,7 +64,8 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, distances[3]);
 
-    html += '<td>' + sumOfArrayValues(distances[3], 9, 18) + '</td><td>' + sumOfArrayValues(distances[3], 0, 18) + '</td><td></td><td></td></tr><tr class="greyTR"><td>Handicap</td>';
+    html += '<td>' + sumOfArrayValues(distances[3], 9, 18) + '</td><td>' + sumOfArrayValues(distances[3], 0, 18) + 
+    '</td><td></td><td></td></tr><tr class="greyTR"><td>Handicap</td>';
 
     createRangeOfCellsFromArray(0, 9, handicap[0]);
 
@@ -69,8 +73,8 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, handicap[0]);
 
-    html += '<td></td><td></td><td></td><td></td></tr><tr><td><input type="text" placeholder="Player 1"><div style="float:right"><i class="fa fa-user-plus" aria-hidden="true"></i></div>' +
-    '</td>';
+    html += '<td></td><td></td><td></td><td></td></tr><tr><td><input type="text" placeholder="Player 1"><div style="float:right">' +
+    '<i class="fa fa-user-plus" aria-hidden="true"></i></div></td>';
 
     createHolesWithClasses(0, 9);
 
@@ -104,7 +108,8 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, par);
 
-    html += '<td>' + sumOfArrayValues(par, 9, 18) + '</td><td>' + sumOfArrayValues(par, 0, 18) + '</td><td></td><td></td></tr><tr id="yellow"><td><div style="float:left;width:50%;">YELLOW' +
+    html += '<td>' + sumOfArrayValues(par, 9, 18) + '</td><td>' + sumOfArrayValues(par, 0, 18) + 
+    '</td><td></td><td></td></tr><tr id="yellow"><td><div style="float:left;width:50%;">YELLOW' +
     '</div><div style="float:right;text-align: right;width:50%;">M-67.3/125 <br>L-72.6/133</div></td>';
 
     createRangeOfCellsFromArray(0, 9, distances[4]);
@@ -113,7 +118,8 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, distances[4]);
     
-    html += '<td>' + sumOfArrayValues(distances[4], 9, 18) + '</td><td>' + sumOfArrayValues(distances[4], 0, 18) + '</td><td></td><td></td></tr><tr class="greyTR"><td>Handicap</td>';
+    html += '<td>' + sumOfArrayValues(distances[4], 9, 18) + '</td><td>' + sumOfArrayValues(distances[4], 0, 18) + 
+    '</td><td></td><td></td></tr><tr class="greyTR"><td>Handicap</td>';
 
     createRangeOfCellsFromArray(0, 9, handicap[1]);
 
@@ -121,7 +127,8 @@ $(document).ready(function(){
 
     createRangeOfCellsFromArray(9, 18, handicap[1]);
 
-    html += '<td></td><td></td><td></td><td></td></tr><tr><td colspan="25"><div style="float:left">DATE_____________________________________________</div><div style="float:left">&nbsp;' +
+    html += '<td></td><td></td><td></td><td></td></tr><tr><td colspan="25"><div style="float:left">' +
+    'DATE_____________________________________________</div><div style="float:left">&nbsp;' +
     '&nbsp;COMPETITOR_____________________________________________</div><div style="float:left">&nbsp;&nbsp;' +
     'MARKER____________________________________________________________________________</div></td></tr>';
 
@@ -223,7 +230,8 @@ $(document).ready(function(){
 
     function createHolesWithClasses(start, end){
     	for(var i = start; i < end; i++){
-          html += '<td class="hole' + (i + 1) + '"><div>0</div><i class="fa fa-plus-square"></i>&nbsp;<i class="fa fa-minus-square"></i></td>';
+          html += '<td class="hole' + (i + 1) + '"><div>0</div><i class="fa fa-plus-square"></i>&nbsp;<i class="fa fa-minus-square">' +
+	  '</i></td>';
       }
     }
 
@@ -242,7 +250,6 @@ $(document).ready(function(){
 
           $('#firstRow').before(html);
       }
-
     }
 })
 
