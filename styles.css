@@ -1,0 +1,39 @@
+body {
+  color: black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+}
+
+td {
+  padding: 10px;
+}
+
+#black {
+  background: black;
+  color: white;
+}
+
+#blue {
+  background: blue;
+  color: white;
+}
+
+#green {
+  background: green;
+  color: white;
+}
+
+.greyTR {
+  background: lightgray;
+}
+
+#yellow {
+  background: yellow;
+}
+
+#banner {
+  width: 100%;
+}
